@@ -1,5 +1,5 @@
 ---
-name: Create Repository in Organization 
+name: Repository Naming Covention in Organization 
  
 on:
   workflow_dispatch:
