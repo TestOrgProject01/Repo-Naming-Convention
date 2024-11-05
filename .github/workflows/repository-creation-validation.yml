@@ -1,4 +1,5 @@
-name: Repository Creation Validation
+#validate repository creation as per Organization naming convention.
+name: Validate Repository Creation
  
 on:
   workflow_dispatch:
