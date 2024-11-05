@@ -99,9 +99,7 @@ on:
         type: choice
         options:
           - None
-          - mgm-abcd
-          - mgm-gone
-          - mgm-fac
+          - mgm-test-template    
       branch_info:
         description: |
           This will set "main" as the default branch for the new repository.
