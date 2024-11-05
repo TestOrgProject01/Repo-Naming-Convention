@@ -6,6 +6,15 @@ on:
       repo_name:
         description: 'Name of the repository to create. Must start with the specified prefix (mgm-)'
         required: true
+      repository_template:
+        description: |
+          Repository template to use when creating the new repository.
+          Select a template or choose "None" for no template.
+        required: false
+        type: choice
+        options:
+          - None
+          - mgm-test-template  
       description:
         description: 'Description of the repository'
         required: false
@@ -90,16 +99,7 @@ on:
           - Unity
           - UnrealEngine
           - VisualStudio
-          - Windows
-      repository_template:
-        description: |
-          Repository template to use when creating the new repository.
-          Select a template or choose "None" for no template.
-        required: false
-        type: choice
-        options:
-          - None
-          - mgm-test-template    
+          - Windows    
       branch_info:
         description: |
           This will set "main" as the default branch for the new repository.
