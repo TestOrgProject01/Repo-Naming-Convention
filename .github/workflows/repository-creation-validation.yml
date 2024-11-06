@@ -13,7 +13,8 @@ on:
           Select a template or choose "None" for no template.
         required: false
         type: choice
-        options:
+        # update repository template names below as list from the organization for creating repository from a template.
+        options:    
           - None
           - mgm-test-template  
       description:
@@ -125,9 +126,10 @@ jobs:
           if [[ "${{ github.event.inputs.repo_name }}" != "${REPO_PREFIX}"* ]]; then
             echo "Error: Repository name must start with '${REPO_PREFIX}'."
             exit 1
+          else
+            echo "Repository name is valid."
           fi
-          echo "Repository name is valid."
-    
+           
       - name: Create repository from template if specified
         if: steps.validate_name.outcome == 'success' && github.event.inputs.repository_template != 'None'
         env:
