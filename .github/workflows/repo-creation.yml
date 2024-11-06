@@ -3,7 +3,7 @@ name: Create Repository in Organization
 on:
   workflow_dispatch:
     inputs:
-      repo_name:
+      repo_name: # Add and update the repository template names whenever necessary
         description: 'Name of the repository to create. Example: mgm-<name>'
         required: true
       description:
